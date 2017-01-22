@@ -54,19 +54,19 @@ try:
         include('light_modes/cylon.py')
             
     elif mode in ['charging']:
-        include('light_modes/ccharging.py')
+        include('light_modes/charging.py')
             
     elif mode in ['loading']:
-        include('light_modes/cloading.py')
+        include('light_modes/loading.py')
 
     elif mode in ['knightrider']:
-        include('light_modes/cknightrider.py')
+        include('light_modes/knightrider.py')
 
     elif mode in ['demo']:
         include('light_modes/cylon.py')
         include('light_modes/charging.py')
         include('light_modes/loading.py')
-        include('light_modes/   knightrider.py')
+        include('light_modes/knightrider.py')
     
 
 except KeyboardInterrupt:
