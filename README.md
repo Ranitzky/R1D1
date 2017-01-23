@@ -20,19 +20,25 @@ LED id     | GPIO id
 8 | 21
 9 | 23  
 
+### Usage
+
 To run use
 
 ```sh
-$ sudo python lights.py
+python lights.py <option>
+--c           : cylon mode
+--g           : charging mode
+--l           : loading mode
+--k           : Knight Rider mode
+--w           : warning mode
+--a           : alarm mode
+--d           : demo mode. passes all individual light modes.
+--help        : show this message
 ```
 
 ### Modes
 
 #### Cylon
-
-```sh
-$ sudo python lights.py --c
-```
 
 ```sh
 0 0 0 0 0 0 0 0 1
@@ -58,10 +64,6 @@ $ sudo python lights.py --c
 #### Charging
 
 ```sh
-$ sudo python lights.py --h
-```
-
-```sh
 0 0 0 0 0 0 0 0 1
 0 0 0 0 0 0 0 1 1
 0 0 0 0 0 0 1 1 1
@@ -75,10 +77,6 @@ $ sudo python lights.py --h
 ```
 
 #### Loading
-
-```sh
-$ sudo python lights.py --l
-```
 
 ```sh
 0 0 0 0 0 0 0 0 1
@@ -96,10 +94,6 @@ $ sudo python lights.py --l
 #### Knight Rider
 
 ```sh
-$ sudo python lights.py --k
-```
-
-```sh
 0 0 0 0 1 0 0 0 0
 0 0 0 1 0 1 0 0 0
 0 0 1 0 0 0 1 0 0 
@@ -115,10 +109,6 @@ $ sudo python lights.py --k
 #### Warning
 
 ```sh
-$ sudo python lights.py --w
-```
-
-```sh
 1 0 1 0 1 0 1 0 1
 0 1 0 1 0 1 0 1 0
 ```
@@ -126,24 +116,6 @@ $ sudo python lights.py --w
 #### Alert
 
 ```sh
-$ sudo python lights.py --a
-```
-
-```sh
 1 1 1 1 1 1 1 1 1
 0 0 0 0 0 0 0 0 0
-```
-
-#### Demo
-
-```sh
-$ sudo python lights.py --d
-```
-
-Run trough all modes.
-
-#### Help
-
-```sh
-$ sudo python lights.py --help
 ```
