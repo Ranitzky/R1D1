@@ -1,7 +1,7 @@
 # R1D1
 Cool robot, that runs trough the office
 
-## 1. Running lights 
+## 1. Lights control 
 
 ### GPIO
 
@@ -94,6 +94,20 @@ $ sudo python lights.py
 0 0 0 1 0 1 0 0 0
 0 0 0 0 1 0 0 0 0
 0 0 0 0 0 0 0 0 0 
+```
+
+#### Warning
+
+```sh
+1 0 1 0 1 0 1 0 1
+0 1 0 1 0 1 0 1 0
+```
+
+#### Alert
+
+```sh
+1 1 1 1 1 1 1 1 1
+0 0 0 0 0 0 0 0 0
 ```
 
 #### Demo

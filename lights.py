@@ -31,6 +31,8 @@ print '\033[1;31mC\033[1;mylon\n'
 print 'C\033[1;31mh\033[1;marging\n'
 print '\033[1;31mL\033[1;moading \n'
 print '\033[1;31mK\033[1;mnight Rider\n'
+print '\033[1;31mW\033[1;marning\n'
+print '\033[1;31mA\033[1;mlert\n'
 print '\033[1;31mD\033[1;memo\n'
 question = raw_input("Please select: ")
 
@@ -43,6 +45,10 @@ elif question in ['k', 'K', 'knight rider' , 'Knight Rider']:
     mode = 'knightrider'
 elif question in ['h', 'H', 'charging', 'Charging']:
     mode = 'charging'
+elif question in ['w', 'W', 'warning', 'Warning']:
+    mode = 'warning'
+elif question in ['a', 'A', 'alert', 'Alert']:
+    mode = 'alert' 
 elif question in ['d', 'D', 'demo', 'Demo']:
     mode = 'demo'
 else:
@@ -52,21 +58,30 @@ else:
 try:
     if mode in ['cylon']:
         include('light_modes/cylon.py')
-            
+        
     elif mode in ['charging']:
+        
         include('light_modes/charging.py')
-            
     elif mode in ['loading']:
+        
         include('light_modes/loading.py')
 
     elif mode in ['knightrider']:
         include('light_modes/knightrider.py')
 
+    elif mode in ['warning']:
+        include('light_modes/warning.py')
+
+    elif mode in ['alert']:
+        include('light_modes/alert.py')
+        
     elif mode in ['demo']:
         include('light_modes/cylon.py')
         include('light_modes/charging.py')
         include('light_modes/loading.py')
         include('light_modes/knightrider.py')
+        include('light_modes/warning.py')
+        include('light_modes/alert.py')
     
 
 except KeyboardInterrupt:
