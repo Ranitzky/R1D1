@@ -31,14 +31,13 @@ try:
     if sys.argv[1] in ['--c','--C','-c','-C','--cylon','--Cylon']:
         include('light_modes/cylon.py')
         
-    elif sys.argv[1] in ['--h','--H','-h','-H','--charging','--Charging']:
-        
+    elif sys.argv[1] in ['--g','--G','-g','-G','--charging','--Charging']:        
         include('light_modes/charging.py')
-    elif sys.argv[1] in ['--l','--L','-l','-L','--loading','--Loading']:
         
+    elif sys.argv[1] in ['--l','--L','-l','-L','--loading','--Loading']:        
         include('light_modes/loading.py')
 
-    elif sys.argv[1] in ['--k','--K','-k','-K','knight-rider','Knight-Rider']:
+    elif sys.argv[1] in ['--k','--K','-k','-K','--knight-rider','--Knight-Rider']:
         include('light_modes/knightrider.py')
 
     elif sys.argv[1] in ['--w','--W','-w','-W','--warning','--Warning']:
@@ -54,8 +53,10 @@ try:
         include('light_modes/knightrider.py')
         include('light_modes/warning.py')
         include('light_modes/alert.py')
+        
     elif sys.argv[1] in ['--h','--H','-h','-H','--help','--Help']:
         include('light_modes/help.py')
+        
     else:
         print 'Unkown parameter. Please use --help for further instructions.'
         exit()

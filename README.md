@@ -31,7 +31,7 @@ python lights.py <option>
 --l           : loading mode
 --k           : Knight Rider mode
 --w           : warning mode
---a           : alarm mode
+--a           : alert mode
 --d           : demo mode. passes all individual light modes.
 --help        : show this message
 ```
