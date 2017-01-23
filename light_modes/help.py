@@ -1,0 +1,8 @@
+print "--c  Cylon mode"
+print "--h  Charging mode"
+print "--l  Loading mode"
+print "--k  Knight Rider mode"
+print "--w  Warning mode"
+print "--a  Alert mode"
+print "--d  Demo mode"
+print "--help  opens this page"
