@@ -31,6 +31,10 @@ $ sudo python lights.py
 #### Cylon
 
 ```sh
+$ sudo python lights.py --c
+```
+
+```sh
 0 0 0 0 0 0 0 0 1
 0 0 0 0 0 0 0 1 0
 0 0 0 0 0 0 1 0 0
@@ -54,6 +58,10 @@ $ sudo python lights.py
 #### Charging
 
 ```sh
+$ sudo python lights.py --h
+```
+
+```sh
 0 0 0 0 0 0 0 0 1
 0 0 0 0 0 0 0 1 1
 0 0 0 0 0 0 1 1 1
@@ -67,6 +75,10 @@ $ sudo python lights.py
 ```
 
 #### Loading
+
+```sh
+$ sudo python lights.py --l
+```
 
 ```sh
 0 0 0 0 0 0 0 0 1
@@ -84,6 +96,10 @@ $ sudo python lights.py
 #### Knight Rider
 
 ```sh
+$ sudo python lights.py --k
+```
+
+```sh
 0 0 0 0 1 0 0 0 0
 0 0 0 1 0 1 0 0 0
 0 0 1 0 0 0 1 0 0 
@@ -99,11 +115,19 @@ $ sudo python lights.py
 #### Warning
 
 ```sh
+$ sudo python lights.py --w
+```
+
+```sh
 1 0 1 0 1 0 1 0 1
 0 1 0 1 0 1 0 1 0
 ```
 
 #### Alert
+
+```sh
+$ sudo python lights.py --a
+```
 
 ```sh
 1 1 1 1 1 1 1 1 1
@@ -112,4 +136,14 @@ $ sudo python lights.py
 
 #### Demo
 
+```sh
+$ sudo python lights.py --d
+```
+
 Run trough all modes.
+
+#### Help
+
+```sh
+$ sudo python lights.py --help
+```

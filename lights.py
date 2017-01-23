@@ -1,6 +1,7 @@
 from time import sleep
 import os
 import RPi.GPIO as GPIO
+import sys
 
 def include(filename):
     if os.path.exists(filename): 
@@ -22,66 +23,42 @@ amount = len(gpioPins)
 middle = len(gpioPins) // 2
     
 GPIO.setmode(GPIO.BOARD)
+GPIO.setwarnings(False)
 GPIO.setup(all, GPIO.OUT)
 GPIO.output(all, False)
-
-# ask user for light mode
-print '\n\n======\n\033[1;32mMode\033[1;m\n======\n'
-print '\033[1;31mC\033[1;mylon\n'
-print 'C\033[1;31mh\033[1;marging\n'
-print '\033[1;31mL\033[1;moading \n'
-print '\033[1;31mK\033[1;mnight Rider\n'
-print '\033[1;31mW\033[1;marning\n'
-print '\033[1;31mA\033[1;mlert\n'
-print '\033[1;31mD\033[1;memo\n'
-question = raw_input("Please select: ")
-
-# handle different possible user ansers and set timings for lights                              
-if question in ['c', 'C', 'cylon', 'Cylon']:
-    mode = 'cylon'
-elif question in ['l', 'L', 'loading' , 'Loading']:
-    mode = 'loading'
-elif question in ['k', 'K', 'knight rider' , 'Knight Rider']:
-    mode = 'knightrider'
-elif question in ['h', 'H', 'charging', 'Charging']:
-    mode = 'charging'
-elif question in ['w', 'W', 'warning', 'Warning']:
-    mode = 'warning'
-elif question in ['a', 'A', 'alert', 'Alert']:
-    mode = 'alert' 
-elif question in ['d', 'D', 'demo', 'Demo']:
-    mode = 'demo'
-else:
-    print 'Unkown option'
-    exit()
  
 try:
-    if mode in ['cylon']:
+    if sys.argv[1] in ['--c','--C','-c','-C','--cylon','--Cylon']:
         include('light_modes/cylon.py')
         
-    elif mode in ['charging']:
+    elif sys.argv[1] in ['--h','--H','-h','-H','--charging','--Charging']:
         
         include('light_modes/charging.py')
-    elif mode in ['loading']:
+    elif sys.argv[1] in ['--l','--L','-l','-L','--loading','--Loading']:
         
         include('light_modes/loading.py')
 
-    elif mode in ['knightrider']:
+    elif sys.argv[1] in ['--k','--K','-k','-K','knight-rider','Knight-Rider']:
         include('light_modes/knightrider.py')
 
-    elif mode in ['warning']:
+    elif sys.argv[1] in ['--w','--W','-w','-W','--warning','--Warning']:
         include('light_modes/warning.py')
 
-    elif mode in ['alert']:
+    elif sys.argv[1] in ['--a','--A','-a','-A','--alert','--Alert']:
         include('light_modes/alert.py')
         
-    elif mode in ['demo']:
+    elif sys.argv[1] in ['--d','--D','-d','-D','--demo','--Demo']:
         include('light_modes/cylon.py')
         include('light_modes/charging.py')
         include('light_modes/loading.py')
         include('light_modes/knightrider.py')
         include('light_modes/warning.py')
         include('light_modes/alert.py')
+    elif sys.argv[1] in ['--h','--H','-h','-H','--help','--Help']:
+        include('light_modes/help.py')
+    else:
+        print 'Unkown parameter. Please use --help for further instructions.'
+        exit()
     
 
 except KeyboardInterrupt:
